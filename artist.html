@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artist | LovangShoot</title>
+
+<style>
+body {
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+  font-size: 40px;
+}
+
+.gallery {
+  column-count: 4;
+  column-gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="artistName"></h1>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+document.getElementById("artistName").innerText = name.toUpperCase();
+
+// 🔥 FETCH FILE LIST (WORKS ON VERCEL STATIC)
+fetch(`assets/artists/${name}/`)
+  .then(res => res.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, "text/html");
+    const links = doc.querySelectorAll("a");
+
+    const gallery = document.getElementById("gallery");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      if (href.match(/\.(jpg|jpeg|png|webp)$/i)) {
+        let img = document.createElement("img");
+        img.src = `assets/artists/${name}/${href}`;
+        gallery.appendChild(img);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
