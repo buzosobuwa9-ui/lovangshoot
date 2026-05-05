@@ -17,7 +17,9 @@ body {
 
 /* HERO */
 .hero {
-    height:90vh;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                url('WhatsApp Image 2026-05-04 at 16.44.01.jpeg') center/cover;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -32,27 +34,32 @@ body {
 
 .hero h1 {
     font-family:'Playfair Display';
-    font-size:50px;
-    letter-spacing:3px;
+    font-size:55px;
+    letter-spacing:4px;
+    animation:fadeUp 1.5s ease;
 }
 
-.hero p {
+.hero .main {
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.hero .tag {
     color:#D4AF37;
-    font-style:italic;
+    margin-top:10px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
 h2 {
     color:#D4AF37;
-    margin-bottom:20px;
 }
 
-/* PINTEREST GRID */
+/* GALLERY */
 .gallery {
     column-count:4;
     column-gap:12px;
@@ -71,11 +78,11 @@ h2 {
     box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
-/* VIDEO GRID */
+/* VIDEOS */
 .videos iframe {
     width:100%;
     height:350px;
-    border:none;
+    margin-bottom:20px;
 }
 
 /* LIGHTBOX */
@@ -99,9 +106,15 @@ h2 {
 /* CONTACT */
 .contact a {
     color:#D4AF37;
-    text-decoration:none;
     display:block;
     margin:10px;
+    text-decoration:none;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
 }
 
 /* MOBILE */
@@ -118,14 +131,16 @@ h2 {
 <div class="hero">
     <img src="logo.jpeg">
     <h1>LOVANGSHOOT</h1>
-    <p>“Here to create history using images”</p>
+    <p class="main">WORLDWIDE HIP HOP • AMAPIANO • STREET CULTURE</p>
+    <p class="tag">“Here to create history using images”</p>
 </div>
 
 <!-- ABOUT -->
 <section>
     <h2>About</h2>
-    <p>
-    Photography & videography company working with upcoming and major hip hop & amapiano artists in South Africa.
+    <p style="max-width:800px;margin:auto;">
+    Lovangshoot captures the raw energy of street culture, blending hip hop and amapiano visuals into cinematic storytelling.
+    Working with upcoming and major artists across South Africa and beyond.
     </p>
 </section>
 
