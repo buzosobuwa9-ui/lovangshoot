@@ -3,14 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <title>Lovangshoot</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;background:#000;color:#fff;font-family:Poppins}
-nav{position:fixed;width:100%;top:0;padding:20px;background:#000;display:flex;justify-content:space-between}
-nav a{color:#D4AF37;text-decoration:none;margin:0 10px}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-h1{font-size:50px}
+body{margin:0;background:#000;color:#fff;font-family:sans-serif}
+
+/* NAV */
+nav{
+position:fixed;width:100%;top:0;
+display:flex;justify-content:space-between;
+padding:20px;background:rgba(0,0,0,0.8);
+z-index:10;
+}
+nav a{color:#D4AF37;margin:10px;text-decoration:none}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* BACKGROUND SLIDES */
+.bg{
+position:absolute;
+width:100%;height:100%;
+background-size:cover;
+background-position:center;
+animation:slide 20s infinite;
+opacity:0.4;
+}
+
+@keyframes slide{
+0%{background-image:url('WhatsApp Image 2026-05-04 at 16.44.01.jpeg')}
+25%{background-image:url('WhatsApp Image 2026-05-04 at 16.44.02.jpeg')}
+50%{background-image:url('WhatsApp Image 2026-05-04 at 16.44.03.jpeg')}
+75%{background-image:url('WhatsApp Image 2026-05-04 at 16.44.04.jpeg')}
+100%{background-image:url('WhatsApp Image 2026-05-04 at 16.44.05.jpeg')}
+}
+
+/* CONTENT */
+.hero h1{z-index:2;font-size:50px}
+.hero p{z-index:2}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#000;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
 </style>
 </head>
 
@@ -21,16 +71,22 @@ h1{font-size:50px}
 <div>
 <a href="index.html">Home</a>
 <a href="work.html">Work</a>
+<a href="videos.html">Videos</a>
 <a href="pricing.html">Pricing</a>
 <a href="contact.html">Contact</a>
 </div>
 </nav>
 
 <div class="hero">
-<img src="logo.jpeg" width="120">
+<div class="bg"></div>
+
 <h1>WORLDWIDE HIP HOP & AMAPIANO</h1>
-<p style="color:#D4AF37">“Here to create history using images”</p>
+<p style="color:#D4AF37">Capture Moments. Craft Memories.</p>
 </div>
+
+<a class="whatsapp" href="https://wa.me/27746632366" target="_blank">
+💬 Book Now
+</a>
 
 </body>
 </html>
