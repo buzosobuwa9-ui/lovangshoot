@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovangshoot</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    background:#000;
+    color:#fff;
+    font-family:'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero {
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero img {
+    width:120px;
+    margin-bottom:20px;
+}
+
+.hero h1 {
+    font-family:'Playfair Display';
+    font-size:50px;
+    letter-spacing:3px;
+}
+
+.hero p {
+    color:#D4AF37;
+    font-style:italic;
+}
+
+/* SECTION */
+section {
+    padding:50px 20px;
+    text-align:center;
+}
+
+h2 {
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+/* PINTEREST GRID */
+.gallery {
+    column-count:4;
+    column-gap:12px;
+}
+
+.gallery img {
+    width:100%;
+    margin-bottom:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover {
+    transform:scale(1.03);
+    box-shadow:0 0 20px rgba(212,175,55,0.5);
+}
+
+/* VIDEO GRID */
+.videos iframe {
+    width:100%;
+    height:350px;
+    border:none;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img {
+    max-width:90%;
+    max-height:90%;
+}
+
+/* CONTACT */
+.contact a {
+    color:#D4AF37;
+    text-decoration:none;
+    display:block;
+    margin:10px;
+}
+
+/* MOBILE */
+@media(max-width:1000px){ .gallery{column-count:3;} }
+@media(max-width:700px){ .gallery{column-count:2;} }
+@media(max-width:500px){ .gallery{column-count:1;} }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="logo.jpeg">
+    <h1>LOVANGSHOOT</h1>
+    <p>“Here to create history using images”</p>
+</div>
+
+<!-- ABOUT -->
+<section>
+    <h2>About</h2>
+    <p>
+    Photography & videography company working with upcoming and major hip hop & amapiano artists in South Africa.
+    </p>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+<img src="logo.jpeg" onclick="openLightbox(this.src)">
+<img src="prices.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.00 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.01 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.01 (2).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.01.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.02 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.02.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.03 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.03 (2).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.03.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.04 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.04.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.05 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.05.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.06.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.08.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.09.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.11.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.13.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.15.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.18.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.19.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.20 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.20 (2).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.20.jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.21 (1).jpeg" onclick="openLightbox(this.src)">
+<img src="WhatsApp Image 2026-05-04 at 16.44.21.jpeg" onclick="openLightbox(this.src)">
+<img src="463148961_17980601516762292_7409017029158283003_n.jpg" onclick="openLightbox(this.src)">
+<img src="463198769_17980601669762292_8868943836031019041_n.jpg" onclick="openLightbox(this.src)">
+<img src="463392958_17980601624762292_1955409277061924621_n.jpg" onclick="openLightbox(this.src)">
+<img src="463414618_17980601639762292_2554244515196126623_n.jpg" onclick="openLightbox(this.src)">
+<img src="463615285_17980601540762292_4778058631747011887_n.jpg" onclick="openLightbox(this.src)">
+<img src="469475369_17987445323762292_7234146822435118687_n.jpg" onclick="openLightbox(this.src)">
+<img src="469555409_17987445356762292_1649820213501852234_n.jpg" onclick="openLightbox(this.src)">
+<img src="469595800_17987445170762292_8961811028298877506_n.jpg" onclick="openLightbox(this.src)">
+<img src="469687351_17987445347762292_1380323400488907181_n.jpg" onclick="openLightbox(this.src)">
+<img src="469703339_17987445008762292_8172389349106975858_n.jpg" onclick="openLightbox(this.src)">
+<img src="469767032_17987848217762292_2832016746841251925_n.jpg" onclick="openLightbox(this.src)">
+<img src="469777146_17987848211762292_1132924717344608009_n.jpg" onclick="openLightbox(this.src)">
+<img src="469777146_17987848292762292_4855191731731263745_n.jpg" onclick="openLightbox(this.src)">
+<img src="469777677_17987850455762292_8017639470134417490_n.jpg" onclick="openLightbox(this.src)">
+<img src="469821658_17987850341762292_5267226679357116761_n.jpg" onclick="openLightbox(this.src)">
+<img src="469827748_17987848220762292_2562970199046123115_n.jpg" onclick="openLightbox(this.src)">
+<img src="469828326_17987848235762292_167155954751752698_n.jpg" onclick="openLightbox(this.src)">
+<img src="469830845_17987850566762292_4599551223022793232_n.jpg" onclick="openLightbox(this.src)">
+<img src="469856453_17987848214762292_6649341889672248482_n.jpg" onclick="openLightbox(this.src)">
+<img src="469864348_17987848238762292_6132376886148617071_n.jpg" onclick="openLightbox(this.src)">
+<img src="469878136_17987848196762292_4041932272874898196_n.jpg" onclick="openLightbox(this.src)">
+<img src="469882942_17987848469762292_6881971562968590109_n.jpg" onclick="openLightbox(this.src)">
+<img src="469889313_17987848427762292_6219568384437706426_n.jpg" onclick="openLightbox(this.src)">
+<img src="469903211_17987850638762292_8541431807514038471_n.jpg" onclick="openLightbox(this.src)">
+<img src="469903382_17987848223762292_3283865587457094642_n.jpg" onclick="openLightbox(this.src)">
+<img src="469906496_17987848232762292_4887093110827921997_n.jpg" onclick="openLightbox(this.src)">
+<img src="469959438_17987850392762292_6757989445150683922_n.jpg" onclick="openLightbox(this.src)">
+<img src="470061669_17988400781762292_1980825862187573556_n.jpg" onclick="openLightbox(this.src)">
+<img src="470894544_17989014908762292_1840905740629502025_n.jpg" onclick="openLightbox(this.src)">
+<img src="470901082_17989014980762292_7064360500176640568_n.jpg" onclick="openLightbox(this.src)">
+<img src="470901154_17989015031762292_905747303819113627_n.jpg" onclick="openLightbox(this.src)">
+<img src="470901180_17989015022762292_399472765431593760_n.jpg" onclick="openLightbox(this.src)">
+<img src="470901221_17989015007762292_6804561094796227045_n.jpg" onclick="openLightbox(this.src)">
+<img src="470901490_17989013618762292_4267470407652335848_n.jpg" onclick="openLightbox(this.src)">
+<img src="470902343_17989013666762292_2158851871882650280_n.jpg" onclick="openLightbox(this.src)">
+<img src="470902411_17989015043762292_8504832735375953339_n.jpg" onclick="openLightbox(this.src)">
+<img src="470911500_17989013651762292_8913006004075513780_n.jpg" onclick="openLightbox(this.src)">
+<img src="470914970_17989013630762292_4726671041821733483_n.jpg" onclick="openLightbox(this.src)">
+<img src="470914970_17989014917762292_7486707216783123966_n.jpg" onclick="openLightbox(this.src)">
+<img src="470944040_17989013546762292_7990192957151454379_n.jpg" onclick="openLightbox(this.src)">
+<img src="470944591_17989013594762292_663183547058789888_n.jpg" onclick="openLightbox(this.src)">
+<img src="470972603_17989013567762292_4749670836938950061_n.jpg" onclick="openLightbox(this.src)">
+<img src="470982825_17989015058762292_4378657786411790434_n.jpg" onclick="openLightbox(this.src)">
+<img src="470986128_17989013639762292_7275336139450865216_n.jpg" onclick="openLightbox(this.src)">
+<img src="472932957_1648824302738819_6608010119510884023_n.jpg" onclick="openLightbox(this.src)">
+<img src="473065274_1648824549405461_2425711022946600015_n.jpg" onclick="openLightbox(this.src)">
+<img src="473067321_1648824292738820_7857579925806285879_n.jpg" onclick="openLightbox(this.src)">
+<img src="473069199_1648815652739684_2371877467095621894_n.jpg" onclick="openLightbox(this.src)">
+<img src="473132612_1648819679405948_1419102135736435881_n.jpg" onclick="openLightbox(this.src)">
+<img src="473134178_1648824576072125_1548909859018667256_n.jpg" onclick="openLightbox(this.src)">
+<img src="473138410_1648815282739721_486772162548146338_n.jpg" onclick="openLightbox(this.src)">
+<img src="473138410_1648819519405964_8528158188779788916_n.jpg" onclick="openLightbox(this.src)">
+<img src="473170517_1648824479405468_8829792883184198964_n.jpg" onclick="openLightbox(this.src)">
+<img src="473176168_1648824356072147_5918263220345292349_n.jpg" onclick="openLightbox(this.src)">
+<img src="473188574_1648815242739725_3538075580025945513_n.jpg" onclick="openLightbox(this.src)">
+<img src="473189153_1648625726092010_7045343125634604731_n.jpg" onclick="openLightbox(this.src)">
+<img src="473189835_1648815309406385_6480711602541028095_n.jpg" onclick="openLightbox(this.src)">
+<img src="473189942_1648620486092534_6230102989250566269_n.jpg" onclick="openLightbox(this.src)">
+<img src="473226408_1648618199426096_2444034166894749832_n.jpg" onclick="openLightbox(this.src)">
+<img src="473230303_1648815692739680_7675540974761243928_n.jpg" onclick="openLightbox(this.src)">
+<img src="473256222_1648824632738786_8307401036763091826_n.jpg" onclick="openLightbox(this.src)">
+<img src="473263924_1648815239406392_2295216067076369663_n.jpg" onclick="openLightbox(this.src)">
+<img src="473265659_1648824516072131_242876632547026377_n.jpg" onclick="openLightbox(this.src)">
+<img src="473267818_1648815686073014_950314745948147123_n.jpg" onclick="openLightbox(this.src)">
+<img src="473269553_1648824629405453_3466969706800172892_n.jpg" onclick="openLightbox(this.src)">
+<img src="473275438_1648819466072636_1820000709803149984_n.jpg" onclick="openLightbox(this.src)">
+<img src="473279729_1648815596073023_6947991267165186469_n.jpg" onclick="openLightbox(this.src)">
+<img src="473293140_1648617536092829_1523504535394226638_n.jpg" onclick="openLightbox(this.src)">
+<img src="473319022_1648815316073051_6211449878721738396_n.jpg" onclick="openLightbox(this.src)">
+<img src="473319955_1648824609405455_7825725598132223289_n.jpg" onclick="openLightbox(this.src)">
+<img src="473347600_1648815586073024_5371308029976063105_n.jpg" onclick="openLightbox(this.src)">
+<img src="473347600_1648824706072112_1175760972009722229_n.jpg" onclick="openLightbox(this.src)">
+<img src="473353199_1648625889425327_5738495805448627806_n.jpg" onclick="openLightbox(this.src)">
+<img src="473365898_1648819482739301_255168853560518320_n.jpg" onclick="openLightbox(this.src)">
+<img src="473370048_1648625956091987_4977239550586412947_n.jpg" onclick="openLightbox(this.src)">
+<img src="473390361_1648815549406361_79417674612478709_n.jpg" onclick="openLightbox(this.src)">
+<img src="473423792_1648815592739690_556319631929950485_n.jpg" onclick="openLightbox(this.src)">
+<img src="473430475_1648815576073025_725364739581310967_n.jpg" onclick="openLightbox(this.src)">
+<img src="473436883_1648620482759201_8644114749306847621_n.jpg" onclick="openLightbox(this.src)">
+<img src="473448719_1654887582132491_3300889773077303876_n.jpg" onclick="openLightbox(this.src)">
+<img src="473449481_1654896098798306_4876448559722362145_n.jpg" onclick="openLightbox(this.src)">
+<img src="473449653_1654887688799147_4708390306886366544_n.jpg" onclick="openLightbox(this.src)">
+<img src="473522715_1654897348798181_7349778398396052303_n.jpg" onclick="openLightbox(this.src)">
+<img src="473532873_1654887855465797_2802550302037045666_n.jpg" onclick="openLightbox(this.src)">
+<img src="473552495_1648630239424892_131921040878787694_n.jpg" onclick="openLightbox(this.src)">
+<img src="473584189_1648815699406346_1130851513905790143_n.jpg" onclick="openLightbox(this.src)">
+<img src="473615296_1648617152759534_7738910025257183755_n.jpg" onclick="openLightbox(this.src)">
+<img src="473619599_1648819469405969_595445528994956516_n.jpg" onclick="openLightbox(this.src)">
+<img src="473621863_1648630056091577_6361430360059507543_n.jpg" onclick="openLightbox(this.src)">
+<img src="473671857_1648815256073057_4818622228950603284_n.jpg" onclick="openLightbox(this.src)">
+<img src="473726846_1648819502739299_4889555027063298070_n.jpg" onclick="openLightbox(this.src)">
+<img src="473740646_1648824296072153_2484009356693023258_n.jpg" onclick="openLightbox(this.src)">
+<img src="473808253_1654887842132465_813373932970694473_n.jpg" onclick="openLightbox(this.src)">
+<img src="473808956_1654887818799134_7932388002331078020_n.jpg" onclick="openLightbox(this.src)">
+<img src="473811556_1654897088798207_2622648715591169725_n.jpg" onclick="openLightbox(this.src)">
+<img src="473829226_1654897355464847_5217262364156623036_n.jpg" onclick="openLightbox(this.src)">
+<img src="474041232_1655525812068668_7592310832540765509_n.jpg" onclick="openLightbox(this.src)">
+<img src="474108411_1655529058735010_2280098982505987828_n.jpg" onclick="openLightbox(this.src)">
+<img src="474109823_1653503565604226_5909263911350977392_n.jpg" onclick="openLightbox(this.src)">
+<img src="474192792_1653503548937561_8239265616428903507_n.jpg" onclick="openLightbox(this.src)">
+<img src="474221744_1653503515604231_4526874009052601730_n.jpg" onclick="openLightbox(this.src)">
+<img src="474396097_1653503465604236_8177870515556309088_n.jpg" onclick="openLightbox(this.src)">
+<img src="474474299_1655526052068644_18689678858854712_n.jpg" onclick="openLightbox(this.src)">
+<img src="474476268_1655529195401663_1968326326775858831_n.jpg" onclick="openLightbox(this.src)">
+<img src="474476402_1655525805402002_4808187641133501520_n.jpg" onclick="openLightbox(this.src)">
+<img src="474477942_1655528978735018_2274204271005083677_n.jpg" onclick="openLightbox(this.src)">
+<img src="474531784_17993173073762292_2245677114440893227_n.jpg" onclick="openLightbox(this.src)">
+<img src="474538723_1655525858735330_2464135092021048948_n.jpg" onclick="openLightbox(this.src)">
+<img src="474541420_17993173121762292_7318812643239062991_n.jpg" onclick="openLightbox(this.src)">
+<img src="474555691_1654896085464974_6682845309470970055_n.jpg" onclick="openLightbox(this.src)">
+<img src="474572945_1655525815402001_1132486220349461961_n.jpg" onclick="openLightbox(this.src)">
+<img src="474577021_1656318915322691_7253593724287175336_n.jpg" onclick="openLightbox(this.src)">
+<img src="474657825_1654897305464852_6164025608166177902_n.jpg" onclick="openLightbox(this.src)">
+<img src="474661172_1656313208656595_1144196714316358663_n.jpg" onclick="openLightbox(this.src)">
+<img src="474700552_1656313321989917_5591548911564477382_n.jpg" onclick="openLightbox(this.src)">
+<img src="474710755_1658622971758952_3325403867525620337_n.jpg" onclick="openLightbox(this.src)">
+<img src="474731686_1655528958735020_5246172825185730032_n.jpg" onclick="openLightbox(this.src)">
+<img src="474744339_1656313365323246_1002011163849582911_n.jpg" onclick="openLightbox(this.src)">
+<img src="474744453_1656313391989910_8973576934470303349_n.jpg" onclick="openLightbox(this.src)">
+<img src="474746287_1656318798656036_5824162192915050734_n.jpg" onclick="openLightbox(this.src)">
+<img src="474746295_1656318961989353_3771642249440398201_n.jpg" onclick="openLightbox(this.src)">
+<img src="474751674_1659966224957960_3993664306479552770_n.jpg" onclick="openLightbox(this.src)">
+<img src="474758472_1659966248291291_5436596069177577807_n.jpg" onclick="openLightbox(this.src)">
+<img src="474760889_1659968208291095_6780895898464975245_n.jpg" onclick="openLightbox(this.src)">
+<img src="474761786_1659963078291608_562359257511407920_n.jpg" onclick="openLightbox(this.src)">
+<img src="474763619_1659968571624392_7306239278768961328_n.jpg" onclick="openLightbox(this.src)">
+<img src="474771021_1659965881624661_6359799065420128562_n.jpg" onclick="openLightbox(this.src)">
+<img src="474785758_1658622815092301_5934360741200198655_n.jpg" onclick="openLightbox(this.src)">
+<img src="474891212_1659962974958285_1154405777869373487_n.jpg" onclick="openLightbox(this.src)">
+<img src="474949050_1659386425015940_8701299224316240121_n.jpg" onclick="openLightbox(this.src)">
+<img src="474949644_1656318728656043_2763673063571104436_n.jpg" onclick="openLightbox(this.src)">
+<img src="474950586_1656313328656583_8039793973583279218_n.jpg" onclick="openLightbox(this.src)">
+<img src="475027926_1663404481280801_1131432528639599523_n.jpg" onclick="openLightbox(this.src)">
+<img src="475028609_1659968471624402_8964711850136560223_n.jpg" onclick="openLightbox(this.src)">
+<img src="475035058_1658622918425624_2998983356520974853_n.jpg" onclick="openLightbox(this.src)">
+<img src="475036792_1663404791280770_7503652651174608897_n.jpg" onclick="openLightbox(this.src)">
+<img src="475077393_1659968514957731_8890100341444548306_n.jpg" onclick="openLightbox(this.src)">
+<img src="475112711_1659966031624646_369838368038256231_n.jpg" onclick="openLightbox(this.src)">
+<img src="475138240_1659962991624950_4196494027829099754_n.jpg" onclick="openLightbox(this.src)">
+<img src="475139267_1659966254957957_1932923580899715114_n.jpg" onclick="openLightbox(this.src)">
+<img src="475140809_1659965874957995_8190426675092365198_n.jpg" onclick="openLightbox(this.src)">
+<img src="475143882_1658622965092286_7277935112890841778_n.jpg" onclick="openLightbox(this.src)">
+<img src="475422022_1659968558291060_315235380696684712_n.jpg" onclick="openLightbox(this.src)">
+<img src="475517570_1662809711340278_1107630176319116601_n.jpg" onclick="openLightbox(this.src)">
+<img src="475595119_1662809401340309_420291950728005042_n.jpg" onclick="openLightbox(this.src)">
+<img src="475762420_1659968554957727_5753825177812569651_n.jpg" onclick="openLightbox(this.src)">
+<img src="475769099_1663404477947468_8768340240134725006_n.jpg" onclick="openLightbox(this.src)">
+<img src="475805788_1662809554673627_289015106535259692_n.jpg" onclick="openLightbox(this.src)">
+<img src="475812054_1662809551340294_7105126587907762021_n.jpg" onclick="openLightbox(this.src)">
+<img src="475839674_1663404397947476_5419385074657253828_n.jpg" onclick="openLightbox(this.src)">
+<img src="475858931_1662809398006976_2193681019654265001_n.jpg" onclick="openLightbox(this.src)">
+<img src="475891688_1666437837644132_2251970109381457466_n.jpg" onclick="openLightbox(this.src)">
+<img src="475926552_1666426514311931_725605785346918878_n.jpg" onclick="openLightbox(this.src)">
+<img src="475977893_1666426554311927_4423827949546002961_n.jpg" onclick="openLightbox(this.src)">
+<img src="475993147_1663404614614121_3185654391559589216_n.jpg" onclick="openLightbox(this.src)">
+<img src="476007518_1666426627645253_8947439462671297422_n.jpg" onclick="openLightbox(this.src)">
+<img src="476092878_1663404391280810_3086692549351450847_n.jpg" onclick="openLightbox(this.src)">
+<img src="476095621_1666426387645277_341367377736437317_n.jpg" onclick="openLightbox(this.src)">
+<img src="476158089_1666426450978604_6924437476708075582_n.jpg" onclick="openLightbox(this.src)">
+<img src="476163802_1666437864310796_8398939320477907259_n.jpg" onclick="openLightbox(this.src)">
+<img src="476232336_1666433664311216_688511926584745849_n.jpg" onclick="openLightbox(this.src)">
+<img src="476235337_1666436300977619_7023074164188261770_n.jpg" onclick="openLightbox(this.src)">
+<img src="476265896_1666437470977502_1809389723691450480_n.jpg" onclick="openLightbox(this.src)">
+<img src="476270198_1666437950977454_932008468774379958_n.jpg" onclick="openLightbox(this.src)">
+<img src="476313755_1666426374311945_8770331863712674592_n.jpg" onclick="openLightbox(this.src)">
+<img src="476314497_1666436290977620_518273441856354235_n.jpg" onclick="openLightbox(this.src)">
+<img src="476324155_1667956017492314_3578329326212849567_n.jpg" onclick="openLightbox(this.src)">
+<img src="476327229_1667956204158962_3234089711079596982_n.jpg" onclick="openLightbox(this.src)">
+<img src="476330979_1667955854158997_5656952474096185801_n.jpg" onclick="openLightbox(this.src)">
+<img src="476341676_1666426340978615_9201830267992861214_n.jpg" onclick="openLightbox(this.src)">
+<img src="476344043_1666437847644131_7432026366197543361_n.jpg" onclick="openLightbox(this.src)">
+<img src="476349092_1667929080828341_2317970414349304468_n.jpg" onclick="openLightbox(this.src)">
+<img src="476356317_1663404711280778_5214367595832254164_n.jpg" onclick="openLightbox(this.src)">
+<img src="476358548_1667997817488134_1423758843633951055_n.jpg" onclick="openLightbox(this.src)">
+<img src="476363696_1667445067543409_4114255825866685489_n.jpg" onclick="openLightbox(this.src)">
+<img src="476367458_1666433807644535_5352944422272515092_n.jpg" onclick="openLightbox(this.src)">
+<img src="476370679_1666437660977483_4290763583433551493_n.jpg" onclick="openLightbox(this.src)">
+<img src="476379782_1667945814160001_2304736346819713835_n.jpg" onclick="openLightbox(this.src)">
+<img src="476383046_1667955970825652_5764942216642152404_n.jpg" onclick="openLightbox(this.src)">
+<img src="476390942_1667955874158995_3822202100805161658_n.jpg" onclick="openLightbox(this.src)">
+<img src="476416277_1667956284158954_7808484392230042885_n.jpg" onclick="openLightbox(this.src)">
+<img src="476419814_1667956307492285_6810729705255277278_n.jpg" onclick="openLightbox(this.src)">
+<img src="476422852_1667938347494081_2124147666140800052_n.jpg" onclick="openLightbox(this.src)">
+<img src="476425660_1667956077492308_1822504344843158154_n.jpg" onclick="openLightbox(this.src)">
+<img src="476426443_1667956210825628_1665470134578572044_n.jpg" onclick="openLightbox(this.src)">
+<img src="476426575_1667956164158966_4439307703358642908_n.jpg" onclick="openLightbox(this.src)">
+<img src="476429938_1667937844160798_3401136983185344833_n.jpg" onclick="openLightbox(this.src)">
+<img src="476431384_1667945904159992_7452584040860429788_n.jpg" onclick="openLightbox(this.src)">
+<img src="476431798_1667445074210075_6638077165049731258_n.jpg" onclick="openLightbox(this.src)">
+<img src="476432221_1668174107470505_2862078096519820751_n.jpg" onclick="openLightbox(this.src)">
+<img src="476435571_1667427850878464_8596783227531894445_n.jpg" onclick="openLightbox(this.src)">
+<img src="476443854_1668175570803692_354133384846696571_n.jpg" onclick="openLightbox(this.src)">
+<img src="476443905_1666437834310799_7793348130534424756_n.jpg" onclick="openLightbox(this.src)">
+<img src="476449460_1667445054210077_2202364513122804538_n.jpg" onclick="openLightbox(this.src)">
+<img src="476449574_1666437840977465_6388897893279572853_n.jpg" onclick="openLightbox(this.src)">
+<img src="476450994_1668175784137004_3686426023644369536_n.jpg" onclick="openLightbox(this.src)">
+<img src="476455716_1667428247545091_5738063321907538745_n.jpg" onclick="openLightbox(this.src)">
+<img src="476457315_1666426390978610_3259633199276752711_n.jpg" onclick="openLightbox(this.src)">
+<img src="476459175_1666428380978411_8015666742308359742_n.jpg" onclick="openLightbox(this.src)">
+<img src="476461934_1667945777493338_8279175364219400580_n.jpg" onclick="openLightbox(this.src)">
+<img src="476471172_1667428227545093_8686590933418096828_n.jpg" onclick="openLightbox(this.src)">
+<img src="476496565_1668173927470523_9044420305020612890_n.jpg" onclick="openLightbox(this.src)">
+<img src="476501908_1667428237545092_4205277735976436196_n.jpg" onclick="openLightbox(this.src)">
+<img src="476525003_1666426417645274_126621244782349555_n.jpg" onclick="openLightbox(this.src)">
+<img src="476553278_1667427887545127_3975240175980722580_n.jpg" onclick="openLightbox(this.src)">
+<img src="476556146_1667427957545120_8021448424559710015_n.jpg" onclick="openLightbox(this.src)">
+<img src="476587059_1667956310825618_3251040344277022887_n.jpg" onclick="openLightbox(this.src)">
+<img src="476598766_1667945897493326_750061501212234169_n.jpg" onclick="openLightbox(this.src)">
+<img src="476606751_1667956167492299_340810951814784351_n.jpg" onclick="openLightbox(this.src)">
+<img src="476608915_1668175500803699_1263283213029697584_n.jpg" onclick="openLightbox(this.src)">
+<img src="476611308_1666428817645034_6450434410412583531_n.jpg" onclick="openLightbox(this.src)">
+<img src="476611433_1666436297644286_3962636294584191944_n.jpg" onclick="openLightbox(this.src)">
+<img src="476611868_1667956197492296_9154204094231582348_n.jpg" onclick="openLightbox(this.src)">
+<img src="476612408_1667956114158971_5922430015734463934_n.jpg" onclick="openLightbox(this.src)">
+<img src="476613586_1667956260825623_1725641866066456744_n.jpg" onclick="openLightbox(this.src)">
+<img src="476614736_1668177604136822_3476744331680012661_n.jpg" onclick="openLightbox(this.src)">
+<img src="476620189_1667427870878462_1570630206714171151_n.jpg" onclick="openLightbox(this.src)">
+<img src="476633868_1666437857644130_4315166769643232453_n.jpg" onclick="openLightbox(this.src)">
+<img src="476638440_1666428657645050_7228135334505627357_n.jpg" onclick="openLightbox(this.src)">
+<img src="476640254_1666433754311207_424515726519506152_n.jpg" onclick="openLightbox(this.src)">
+<img src="476641708_1666433644311218_5840180087474702153_n.jpg" onclick="openLightbox(this.src)">
+<img src="476667116_1669599297327986_5472953712891374762_n.jpg" onclick="openLightbox(this.src)">
+<img src="476745088_1667945787493337_6473429825463755908_n.jpg" onclick="openLightbox(this.src)">
+<img src="476774041_1669599307327985_9131060283554588396_n.jpg" onclick="openLightbox(this.src)">
+<img src="476782789_1667956184158964_4180751419127752399_n.jpg" onclick="openLightbox(this.src)">
+<img src="476785725_1667955830825666_5705789450642876613_n.jpg" onclick="openLightbox(this.src)">
+<img src="476791276_1667955877492328_1502424116125229155_n.jpg" onclick="openLightbox(this.src)">
+<img src="476791526_1667956010825648_6473311120994932245_n.jpg" onclick="openLightbox(this.src)">
+<img src="476797627_1668174130803836_381798622797888670_n.jpg" onclick="openLightbox(this.src)">
+<img src="476797981_1668177544136828_4141639719220384037_n.jpg" onclick="openLightbox(this.src)">
+<img src="476798669_1668173827470533_1495791775229172749_n.jpg" onclick="openLightbox(this.src)">
+<img src="476798844_1668173780803871_3895476201235142441_n.jpg" onclick="openLightbox(this.src)">
+<img src="476799149_1668175654137017_6738030527130051157_n.jpg" onclick="openLightbox(this.src)">
+<img src="476800490_1667954980825751_5738632396704125298_n.jpg" onclick="openLightbox(this.src)">
+<img src="476800529_1668175780803671_4707350886428045970_n.jpg" onclick="openLightbox(this.src)">
+<img src="476800708_1668174090803840_3419026859824650347_n.jpg" onclick="openLightbox(this.src)">
+<img src="476816333_1668173910803858_5058688220474265071_n.jpg" onclick="openLightbox(this.src)">
+<img src="476816343_1668173820803867_3798916948863998348_n.jpg" onclick="openLightbox(this.src)">
+<img src="476823400_1667945560826693_375730787597488572_n.jpg" onclick="openLightbox(this.src)">
+<img src="476825654_1668175714137011_3373426718779468347_n.jpg" onclick="openLightbox(this.src)">
+<img src="476825764_1668175660803683_5250770303926155982_n.jpg" onclick="openLightbox(this.src)">
+<img src="476830520_1668173887470527_1522741025197908707_n.jpg" onclick="openLightbox(this.src)">
+<img src="476836606_1668178770803372_5248590874289435800_n.jpg" onclick="openLightbox(this.src)">
+<img src="476837131_1668174157470500_2452391625378430213_n.jpg" onclick="openLightbox(this.src)">
+<img src="476837202_1668174120803837_2894446703852533245_n.jpg" onclick="openLightbox(this.src)">
+<img src="476837943_1668173594137223_4018456012899305602_n.jpg" onclick="openLightbox(this.src)">
+<img src="476859732_1667956287492287_6799405170445037173_n.jpg" onclick="openLightbox(this.src)">
+<img src="476888190_1667945790826670_3449934857120066583_n.jpg" onclick="openLightbox(this.src)">
+<img src="476894123_1667945740826675_6834565132812763440_n.jpg" onclick="openLightbox(this.src)">
+<img src="476897097_1667945580826691_4583365573720974553_n.jpg" onclick="openLightbox(this.src)">
+<img src="476897253_1666436427644273_3181581321210148606_n.jpg" onclick="openLightbox(this.src)">
+<img src="476897889_1667955964158986_898279427471007636_n.jpg" onclick="openLightbox(this.src)">
+<img src="476903064_1667956230825626_1940708607063154446_n.jpg" onclick="openLightbox(this.src)">
+<img src="476908389_1666433740977875_8418274941106708255_n.jpg" onclick="openLightbox(this.src)">
+<img src="476919032_1667956044158978_8008946536039374693_n.jpg" onclick="openLightbox(this.src)">
+<img src="476923733_1667929154161667_7865286845539192335_n.jpg" onclick="openLightbox(this.src)">
+<img src="476930657_1667955817492334_7794507166716082890_n.jpg" onclick="openLightbox(this.src)">
+<img src="476947984_1670084733946109_6247825490946648352_n.jpg" onclick="openLightbox(this.src)">
+<img src="476949730_1667945907493325_8472856366662216712_n.jpg" onclick="openLightbox(this.src)">
+<img src="476956504_1667956187492297_4682476696927913190_n.jpg" onclick="openLightbox(this.src)">
+<img src="476964289_1667427907545125_1928976091084446093_n.jpg" onclick="openLightbox(this.src)">
+<img src="476969592_1667956207492295_7641909055851549499_n.jpg" onclick="openLightbox(this.src)">
+<img src="476977295_1669595133995069_6273264777562397732_n.jpg" onclick="openLightbox(this.src)">
+<img src="477006539_1668173924137190_2142909436509563702_n.jpg" onclick="openLightbox(this.src)">
+<img src="477009913_1667956227492293_2954140349099227077_n.jpg" onclick="openLightbox(this.src)">
+<img src="477011526_1667956154158967_4552716285544672409_n.jpg" onclick="openLightbox(this.src)">
+<img src="477013295_1667427857545130_8551069216253655811_n.jpg" onclick="openLightbox(this.src)">
+<img src="477014014_1668175637470352_448324111308719752_n.jpg" onclick="openLightbox(this.src)">
+<img src="477029842_1667955974158985_1264550688762379301_n.jpg" onclick="openLightbox(this.src)">
+<img src="477036461_1667298340891415_4573597470997454395_n.jpg" onclick="openLightbox(this.src)">
+<img src="477039982_1667955934158989_4607358174516461095_n.jpg" onclick="openLightbox(this.src)">
+<img src="477051796_1667990290822220_8016561951849307900_n.jpg" onclick="openLightbox(this.src)">
+<img src="477082606_1667956314158951_8436370797810144524_n.jpg" onclick="openLightbox(this.src)">
+<img src="477084861_1667956020825647_7703894160004155196_n.jpg" onclick="openLightbox(this.src)">
+<img src="477097251_1667955904158992_337070124395429277_n.jpg" onclick="openLightbox(this.src)">
+<img src="477107545_1669595150661734_664638256211053048_n.jpg" onclick="openLightbox(this.src)">
+<img src="477123479_1669584607329455_1425568567099370957_n.jpg" onclick="openLightbox(this.src)">
+<img src="477200937_1669599390661310_3011269937437535494_n.jpg" onclick="openLightbox(this.src)">
+<img src="477241565_1667955920825657_1092165557971399602_n.jpg" onclick="openLightbox(this.src)">
+<img src="477266083_1667428094211773_3845392677574478279_n.jpg" onclick="openLightbox(this.src)">
+<img src="477416503_1669599320661317_2819757989421284865_n.jpg" onclick="openLightbox(this.src)">
+<img src="477435347_17995905716762292_1581224292677725543_n.jpg" onclick="openLightbox(this.src)">
+<img src="477435463_1667956270825622_1689469221052102574_n.jpg" onclick="openLightbox(this.src)">
+<img src="477439727_1667427874211795_295337405826417912_n.jpg" onclick="openLightbox(this.src)">
+<img src="477441752_1669584460662803_7922537638602788109_n.jpg" onclick="openLightbox(this.src)">
+<img src="477443053_1669595137328402_3238982467578694547_n.jpg" onclick="openLightbox(this.src)">
+<img src="477549843_1667937810827468_4628736226616046137_n.jpg" onclick="openLightbox(this.src)">
+<img src="477574322_1668178964136686_8720810127611652871_n.jpg" onclick="openLightbox(this.src)">
+<img src="477577516_1668175534137029_7850673697921726453_n.jpg" onclick="openLightbox(this.src)">
+<img src="477590185_1669595193995063_676542476388986764_n.jpg" onclick="openLightbox(this.src)">
+<img src="477592137_1667445057543410_2144052266490581740_n.jpg" onclick="openLightbox(this.src)">
+<img src="477600914_1669584603996122_9090127637712149060_n.jpg" onclick="openLightbox(this.src)">
+<img src="477622725_1669584483996134_303849935430204699_n.jpg" onclick="openLightbox(this.src)">
+<img src="477666729_1670084740612775_8909947343209402436_n.jpg" onclick="openLightbox(this.src)">
+<img src="477675928_1667956297492286_1452755795818543849_n.jpg" onclick="openLightbox(this.src)">
+<img src="477684623_17995905728762292_4178942716134487417_n.jpg" onclick="openLightbox(this.src)">
+<img src="477734899_1668175700803679_5100252957083297519_n.jpg" onclick="openLightbox(this.src)">
+<img src="477742089_1667956117492304_2724912297238574574_n.jpg" onclick="openLightbox(this.src)">
+<img src="477782073_1667945874159995_5291420314862325062_n.jpg" onclick="openLightbox(this.src)">
+<img src="477787271_1667956087492307_128108860269641836_n.jpg" onclick="openLightbox(this.src)">
+<img src="477793161_1667955884158994_539846398496484730_n.jpg" onclick="openLightbox(this.src)">
+<img src="477794717_1667956067492309_501326593055778594_n.jpg" onclick="openLightbox(this.src)">
+<img src="478055202_1669595187328397_7103532162408362693_n.jpg" onclick="openLightbox(this.src)">
+<img src="478182816_1669599310661318_6091568697408534280_n.jpg" onclick="openLightbox(this.src)">
+<img src="478220023_1670084827279433_9049321546629478508_n.jpg" onclick="openLightbox(this.src)">
+<img src="478367866_17995905794762292_7352497142502991844_n.jpg" onclick="openLightbox(this.src)">
+<img src="478890797_1670084817279434_5047739224115798586_n.jpg" onclick="openLightbox(this.src)">
+<img src="478972710_1669599293994653_3837173537473172835_n.jpg" onclick="openLightbox(this.src)">
+<img src="479181969_1670084787279437_7777315382279976792_n.jpg" onclick="openLightbox(this.src)">
+<img src="479186091_1670084797279436_375602675990940984_n.jpg" onclick="openLightbox(this.src)">
+<img src="479188097_1670084833946099_4653108361112368390_n.jpg" onclick="openLightbox(this.src)">
+<img src="479485513_17995924148762292_2888092930786253171_n.jpg" onclick="openLightbox(this.src)">
+<img src="479495366_17995924136762292_927452385421835248_n.jpg" onclick="openLightbox(this.src)">
+<img src="479500017_1669584493996133_8948539050645732442_n.jpg" onclick="openLightbox(this.src)">
+<img src="490065535_18003082559762292_8876065176397821237_n.jpg" onclick="openLightbox(this.src)">
+<img src="491444615_18003082568762292_6632281265849592452_n.jpg" onclick="openLightbox(this.src)">
+<img src="641180367_17873881527540158_3014153876222955764_n.jpg" onclick="openLightbox(this.src)">
+<img src="641291312_17873881242540158_6192055357809905827_n.jpg" onclick="openLightbox(this.src)">
+<img src="641361518_17873881272540158_3008787336642768180_n.jpg" onclick="openLightbox(this.src)">
+<img src="641700183_17873881263540158_7730674460890811606_n.jpg" onclick="openLightbox(this.src)">
+<img src="641713396_17873881554540158_5417729523812156368_n.jpg" onclick="openLightbox(this.src)">
+<img src="641720134_17873881593540158_2961099532022906347_n.jpg" onclick="openLightbox(this.src)">
+<img src="641734522_17873881308540158_1919960155555800894_n.jpg" onclick="openLightbox(this.src)">
+<img src="641744831_17873881236540158_9168633125482593786_n.jpg" onclick="openLightbox(this.src)">
+<img src="641745307_17873881224540158_8957127397604559622_n.jpg" onclick="openLightbox(this.src)">
+<img src="641749446_17873881509540158_7112688844630051467_n.jpg" onclick="openLightbox(this.src)">
+<img src="641757329_17874193830540158_5604359457279268314_n.jpg" onclick="openLightbox(this.src)">
+<img src="641757502_17874193839540158_3189943004522884085_n.jpg" onclick="openLightbox(this.src)">
+<img src="641952915_17873881536540158_5516522569043112150_n.jpg" onclick="openLightbox(this.src)">
+<img src="642008874_17873881299540158_2428439700903013607_n.jpg" onclick="openLightbox(this.src)">
+<img src="642202589_17874193818540158_2047806945500120827_n.jpg" onclick="openLightbox(this.src)">
+<img src="642422428_17873881290540158_6530718266013974962_n.jpg" onclick="openLightbox(this.src)">
+<img src="642423381_17874193902540158_8545806807379273301_n.jpg" onclick="openLightbox(this.src)">
+<img src="642435440_17874193872540158_1464154808081207514_n.jpg" onclick="openLightbox(this.src)">
+<img src="642491710_17873881251540158_4910716805150746089_n.jpg" onclick="openLightbox(this.src)">
+<img src="642506491_17874193863540158_8481192005098627657_n.jpg" onclick="openLightbox(this.src)">
+<img src="652391148_17878017912540158_6862281446450671270_n.jpg" onclick="openLightbox(this.src)">
+<img src="652844968_17877488097540158_7458981559711811728_n.jpg" onclick="openLightbox(this.src)">
+<img src="653475045_17877488133540158_2150356955340421611_n.jpg" onclick="openLightbox(this.src)">
+<img src="653911447_17877488151540158_1787131407450511786_n.jpg" onclick="openLightbox(this.src)">
+<img src="654314328_17878017504540158_3507217416303407631_n.jpg" onclick="openLightbox(this.src)">
+<img src="655027488_17877488142540158_4355722200257252278_n.jpg" onclick="openLightbox(this.src)">
+<img src="655187695_17878017453540158_8173834814962752210_n.jpg" onclick="openLightbox(this.src)">
+<img src="655635760_17878603761540158_2006142424276555694_n.jpg" onclick="openLightbox(this.src)">
+<img src="656069718_17878017663540158_2903424738568891000_n.jpg" onclick="openLightbox(this.src)">
+<img src="656256042_17878603788540158_7248803602705550085_n.jpg" onclick="openLightbox(this.src)">
+<img src="656896452_17878603770540158_5859335184811575324_n.jpg" onclick="openLightbox(this.src)">
+<img src="657593949_17878603809540158_2564651784587002040_n.jpg" onclick="openLightbox(this.src)">
+<img src="657762897_17880663636540158_2520988714426983257_n.jpg" onclick="openLightbox(this.src)">
+<img src="658351672_17878603779540158_7131314399076164679_n.jpg" onclick="openLightbox(this.src)">
+<img src="658703697_17880663615540158_8683117007368161235_n.jpg" onclick="openLightbox(this.src)">
+<img src="658732556_17880663585540158_9030366762583613675_n.jpg" onclick="openLightbox(this.src)">
+<img src="658800255_17880663576540158_4248188448496612989_n.jpg" onclick="openLightbox(this.src)">
+<img src="658896746_17880664053540158_9032910538275888954_n.jpg" onclick="openLightbox(this.src)">
+<img src="658919640_17880663627540158_1968941477873856293_n.jpg" onclick="openLightbox(this.src)">
+<img src="659084667_17880664089540158_3611595256468079375_n.jpg" onclick="openLightbox(this.src)">
+<img src="661643621_17880663597540158_1234831382609238859_n.jpg" onclick="openLightbox(this.src)">
+<img src="662304724_17880664071540158_3892973198839713016_n.jpg" onclick="openLightbox(this.src)">
+<img src="675419991_18046936292762292_2241567277453928470_n.jpg" onclick="openLightbox(this.src)">
+<img src="680784523_18046936283762292_1551329282833587512_n.jpg" onclick="openLightbox(this.src)">
+<img src="inkosi yamandebele.jpg" onclick="openLightbox(this.src)">
+<img src="*.png" onclick="openLightbox(this.src)">
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos">
+    <h2>Featured Work</h2>
+
+    <iframe src="https://www.instagram.com/reel/DX7juuoRot6/embed"></iframe>
+    <iframe src="https://www.instagram.com/reel/DWOFtGQDL2s/embed"></iframe>
+    <iframe src="https://www.instagram.com/reel/DWN_hreDJO9/embed"></iframe>
+    <iframe src="https://www.instagram.com/reel/DVtiXjVjMzl/embed"></iframe>
+    <iframe src="https://www.instagram.com/reel/DUuwAVlDO4Q/embed"></iframe>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Bookings</h2>
+    <a href="tel:+27746632366">📞 +27 74 663 2366</a>
+    <a href="mailto:thandoeven@gmail.com">📧 thandoeven@gmail.com</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+    document.getElementById("lightbox").style.display="flex";
+    document.getElementById("lightbox-img").src=src;
+}
+function closeLightbox(){
+    document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
