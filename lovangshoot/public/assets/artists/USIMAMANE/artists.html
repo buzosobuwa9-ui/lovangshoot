@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artists | LovangShoot</title>
+
+<style>
+body { background:#0a0a0a; color:white; font-family:sans-serif; }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:30px;
+  padding:40px;
+}
+.card {
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+  text-decoration:none;
+  color:white;
+}
+.card:hover { transform:scale(1.05); }
+.card img { width:100%; height:300px; object-fit:cover; }
+.card h2 { padding:15px; }
+</style>
+
+</head>
+<body>
+
+<h1 style="text-align:center;">Artists</h1>
+
+<div class="grid">
+
+<a class="card" href="artist.html?name=usimamane">
+  <img src="assets/artists/usimamane/1.jpeg">
+  <h2>USIMAMANE</h2>
+</a>
+
+<a class="card" href="artist.html?name=k-keed">
+  <img src="assets/artists/k-keed/1.jpeg">
+  <h2>K.KEED</h2>
+</a>
+
+<a class="card" href="artist.html?name=maglera-doe-boy">
+  <img src="assets/artists/maglera-doe-boy/1.jpeg">
+  <h2>Maglera Doe Boy</h2>
+</a>
+
+<a class="card" href="artist.html?name=bravo-le-roux">
+  <img src="assets/artists/bravo-le-roux/1.jpeg">
+  <h2>Bravo Le Roux</h2>
+</a>
+
+</div>
+
+</body>
+</html>
